@@ -23,20 +23,17 @@ class UserResource extends Resource
     {
         return $form
             ->schema([
-                Forms\Components\Grid::make()
-                    ->schema([
-                        Forms\Components\Placeholder::make('Contact Owner')
-                            ->columnSpanFull(),
-                        Forms\Components\Radio::make('contact')
-                            ->hiddenLabel()
-                            ->inline()
-                            ->options([
-                                'none' => 'None',
-                                'select owner' => 'Select Owner',
-                                'assign conditionally' => 'Assign Conditionally',
-                            ])
-                            ->columnSpanFull(),
-                    ]),
+                Forms\Components\Placeholder::make('Contact Owner')
+                    ->columnSpanFull(),
+                Forms\Components\Radio::make('contact')
+                    ->hiddenLabel()
+                    ->inline()
+                    ->options([
+                        'none' => 'None',
+                        'select owner' => 'Select Owner',
+                        'assign conditionally' => 'Assign Conditionally',
+                    ])
+                    ->columnSpanFull(),
             ]);
     }
 
